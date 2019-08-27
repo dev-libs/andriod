@@ -23,10 +23,7 @@ class GetUserTexts : AppCompatActivity() {
         list.adapter = dataListAdapter
 
         bttn_set_words.setOnClickListener {
-            //TODO: Replace MainActivity in intent with the LastActivity
-            val intent = Intent(this, MainActivity::class.java)
-
-
+            val intent = Intent(this, LastPageActivity::class.java)
             startActivity(intent)
         }
     }
