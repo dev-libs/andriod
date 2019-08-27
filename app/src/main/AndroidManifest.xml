@@ -9,12 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".FirstModel"></activity>
-        <activity android:name=".MainActivity">
-=======
         <activity android:name=".ui.MainActivity">
->>>>>>> master
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
