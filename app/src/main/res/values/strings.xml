@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DevLibs</string>
+    <string name="this_is_your_story">THIS IS YOUR STORY</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="sampletextsampletextsampletext">SAMPLETEXTSAMPLETEXTSAMPLETEXT</string>
 </resources>
