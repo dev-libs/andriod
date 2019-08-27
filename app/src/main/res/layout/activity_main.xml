@@ -11,20 +11,18 @@
         android:id="@+id/custom_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_margin="16dp"
         android:text="Hello World!"
         app:background_color="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/username"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_weight="1"
         app:textSize="12sp"
-        app:text_color="@color/blue">
-    </com.example.devlibs.view.CustomView>
+        app:text_color="@color/blue" />
 
     <TextView
         android:id="@+id/login"
