@@ -17,6 +17,7 @@
 </view>
 
     <Button
+        android:background="@color/blue"
         android:id="@+id/button_submit"
         android:padding="8dp"
         android:layout_margin="16dp"
