@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+<view class="androidx.appcompat.app.AlertController$RecycleListView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</view>
+
+    <Button
+        android:id="@+id/button_submit"
+        android:padding="8dp"
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
