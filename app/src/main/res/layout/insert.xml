@@ -14,10 +14,10 @@
     app:layout_constraintEnd_toEndOf="parent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-
 </view>
 
     <Button
+        android:background="@color/blue"
         android:id="@+id/button_submit"
         android:padding="8dp"
         android:layout_margin="16dp"

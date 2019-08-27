@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.MainActivity">
 
     <com.example.devlibs.view.CustomView
         android:id="@+id/custom_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
+        android:layout_margin="16dp"
         android:text="Hello World!"
         app:background_color="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,15 +26,39 @@
         app:text_color="@color/blue">
     </com.example.devlibs.view.CustomView>
 
-    <Button
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/login"
+        android:textAlignment="center"
+        android:text="LOGIN"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        android:layout_margin="16dp"
+        android:hint="Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/password"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        android:hint="Password"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
