@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <com.example.devlibs.view.CustomView
         android:id="@+id/custom_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         android:text="Hello World!"
         app:background_color="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +24,37 @@
         app:textSize="12sp"
         app:text_color="@color/blue">
     </com.example.devlibs.view.CustomView>
+
+    <TextView
+        android:id="@+id/login"
+        android:textAlignment="center"
+        android:text="LOGIN"
+        android:textSize="24sp"
+        android:textColor="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        android:hint="Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/grey"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/username"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
