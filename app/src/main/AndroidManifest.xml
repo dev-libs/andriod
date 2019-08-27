@@ -9,11 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.LastPageActivity"></activity>
         <activity android:name=".ui.MainActivity">
-<<<<<<< HEAD
-
-=======
->>>>>>> 95ffc449d3bb9c8fdcb52df356cd298de7fc6e09
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,4 +18,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
