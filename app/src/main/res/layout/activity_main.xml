@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
+        android:layout_margin="16dp"
         android:text="Hello World!"
         app:background_color="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
