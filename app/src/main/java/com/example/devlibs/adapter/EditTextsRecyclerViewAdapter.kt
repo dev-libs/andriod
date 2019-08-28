@@ -25,15 +25,16 @@ class EditTextsRecyclerViewAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = wordsToUse[position]
         holder.wordType.text = item.typeOfWords
+        holder.word1.setText(item.word1, TextView.BufferType.EDITABLE)
+        holder.word2.setText(item.word2, TextView.BufferType.EDITABLE)
+        holder.word3.setText(item.word3, TextView.BufferType.EDITABLE)
 
         //On text change listener
 //        change theme programmatically
 //        LinearLayout custom view edittexts_item.xml
         //use material.io editTexts
 
-        holder.word1.setText(item.word1, TextView.BufferType.EDITABLE)
-        holder.word2.setText(item.word2, TextView.BufferType.EDITABLE)
-        holder.word3.setText(item.word3, TextView.BufferType.EDITABLE)
+
     }
 
     override fun getItemCount(): Int = wordsToUse.size
