@@ -58,9 +58,10 @@ class LastPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
         button_save.setOnClickListener {
-            val saveIntent = Intent()
+            val saveIntent = Intent(this, SavedStoriesActivity::class.java)
             saveIntent.putExtra(story_text.toString(), PASSING_STRING)
             setResult(Activity.RESULT_OK, intent)
+            startActivity(saveIntent)
 
             finish()
 

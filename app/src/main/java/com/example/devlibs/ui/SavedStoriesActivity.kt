@@ -36,8 +36,8 @@ class SavedStoriesActivity : AppCompatActivity() {
 
         override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
             if (requestCode == RESULT_INT && resultCode == Activity.RESULT_OK) {
-                val myStory: LastPageActivity =
-                    data?.getSerializableExtra(PASSING_STRING) as LastPageActivity
+                val myStory: TextView =
+                    data?.getSerializableExtra(PASSING_STRING) as TextView
                 val programText: TextView = textViewGenerator(myStory)
                 activity_saved_stories.addView(programText)
             }
@@ -45,7 +45,7 @@ class SavedStoriesActivity : AppCompatActivity() {
         }
 
 
-    fun textViewGenerator(myStory: LastPageActivity): TextView{
+    fun textViewGenerator(myStory: TextView): TextView{
         val programTextView: TextView = TextView(this)
         programTextView.textSize = 20f
         programTextView.text = story_text.text
