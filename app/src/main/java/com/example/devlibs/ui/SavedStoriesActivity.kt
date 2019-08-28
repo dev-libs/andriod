@@ -56,6 +56,7 @@ class SavedStoriesActivity : AppCompatActivity() {
             activity_saved_stories.removeView(it)
 
         }
+
         return programTextView
     }
 
