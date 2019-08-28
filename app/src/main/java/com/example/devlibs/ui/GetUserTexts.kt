@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devlibs.R
 import com.example.devlibs.adapter.EditTextsRecyclerViewAdapter
-import com.example.devlibs.model.ListObject
+import com.example.devlibs.models.ListObject
 import kotlinx.android.synthetic.main.activity_get_user_texts.*
 import kotlinx.android.synthetic.main.edittexts_item.*
 
