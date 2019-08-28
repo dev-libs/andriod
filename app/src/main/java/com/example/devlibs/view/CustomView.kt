@@ -18,7 +18,7 @@ class CustomView (context: Context, attrs: AttributeSet?): LinearLayout(context,
         val textWeight = typedArray.getFloat(R.styleable.CustomView_layout_weight, 0f)
         val textSize = typedArray.getDimension(R.styleable.CustomView_textSize, 12f)
         val textLayoutParams = LayoutParams(0, LayoutParams.WRAP_CONTENT, textWeight)
-        val textColor = typedArray.getColor(R.styleable.CustomView_text_color, Color.BLUE)
+        val textColor = typedArray.getColor(R.styleable.CustomView_text_color, Color.WHITE)
         val backGroundColor = typedArray.getColor(R.styleable.CustomView_background_color, Color.BLACK)
         val textView = LayoutInflater.from(context).inflate(R.layout.custom_view, this, false) as TextView
         textView.text = "Welcome to Dev Libs!" +
