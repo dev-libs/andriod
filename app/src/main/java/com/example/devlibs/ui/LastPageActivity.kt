@@ -1,10 +1,12 @@
 package com.example.devlibs.ui
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.devlibs.R
 import kotlinx.android.synthetic.main.activity_last_page.*
+import kotlinx.android.synthetic.main.story_produce.*
 
 class LastPageActivity : AppCompatActivity() {
 
@@ -14,6 +16,7 @@ class LastPageActivity : AppCompatActivity() {
         const val KEY_THIRD_SENTANCE = "and loved doing some random things!"
         const val KEY_FOURTH_SENTANCE = "He had a friend by the name of"
         const val KEY_FINAL_SENTANCE = "And when they did random things together it turned to crazy randomness!"
+        const val PASSING_STRING = " "
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,9 +53,17 @@ class LastPageActivity : AppCompatActivity() {
         }
         //note that this is just a button intent
 
-        button.setOnClickListener {
+        button_tryagain.setOnClickListener {
             val intent = Intent(this, GetUserTexts::class.java)
             startActivity(intent)
+        }
+        button_save.setOnClickListener {
+            val saveIntent = Intent()
+            saveIntent.putExtra(story_text.toString(), PASSING_STRING)
+            setResult(Activity.RESULT_OK, intent)
+
+            finish()
+
         }
     }
 }
