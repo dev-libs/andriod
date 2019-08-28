@@ -1,45 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="1dp"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="32dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/footer">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/word_type"
+            android:textColor="@color/text1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="16dp"
+            android:text="Adjectives:"
+            android:textAppearance="?attr/textAppearanceListItem" />
 
-            <TextView
-                android:id="@+id/word_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Adjectives:"
-                android:textAppearance="?attr/textAppearanceListItem" />
+        <EditText
+            android:id="@+id/edittext1"
+            android:background="@color/text1"
+            android:layout_width="200dp"
+            android:textColorHint="@color/grey"
+            android:hint="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAppearance="?attr/textAppearanceListItem" />
 
-            <EditText
-                android:id="@+id/edittext1"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:textAppearance="?attr/textAppearanceListItem" />
+        <EditText
+            android:id="@+id/edittext2"
+            android:layout_width="200dp"
+            android:background="@color/text1"
+            android:textColorHint="@color/grey"
+            android:hint="2"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAppearance="?attr/textAppearanceListItem" />
 
-            <EditText
-                android:id="@+id/edittext2"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:textAppearance="?attr/textAppearanceListItem" />
+        <EditText
+            android:id="@+id/edittext3"
+            android:layout_width="200dp"
+            android:background="@color/text1"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColorHint="@color/grey"
+            android:hint="3"
+            android:textAppearance="?attr/textAppearanceListItem" />
 
-            <EditText
-                android:id="@+id/edittext3"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:textAppearance="?attr/textAppearanceListItem" />
-
-        </LinearLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
 
