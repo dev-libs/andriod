@@ -13,9 +13,9 @@ import kotlinx.android.synthetic.main.edittexts_item.*
 
 class GetUserTexts : AppCompatActivity() {
     companion object{
-        const val KEY_NOUN_ONE = "my string "
-        const val KEY_ADJECTIVE = "my adjective "
-        const val KEY_NOUN_TWO = "my second string"
+        const val KEY_NOUN_ONE = "noun1 "
+        const val KEY_NOUN_TWO = "noun 2 "
+        const val KEY_NOUN_THREE = "noun 3"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,8 +34,8 @@ class GetUserTexts : AppCompatActivity() {
             //TODO 1 ! grabbing our editText and passing them into our story (using `key`(companion value)):
 
             intent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
-            intent.putExtra(KEY_ADJECTIVE, edittext2.text.toString())
-            intent.putExtra(KEY_NOUN_TWO, edittext3.text.toString())
+            intent.putExtra(KEY_NOUN_TWO, edittext2.text.toString())
+            intent.putExtra(KEY_NOUN_THREE, edittext3.text.toString())
             startActivity(intent)
         }
     }
