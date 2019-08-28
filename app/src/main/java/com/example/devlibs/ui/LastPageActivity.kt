@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.story_produce.*
 
 class LastPageActivity : AppCompatActivity() {
 
+
     companion object{
         const val KEY_STORY_INTRO = "Once upon time there was this dude by the name of"
         const val KEY_SECOND_SENTANCE = "He was very"
@@ -18,6 +19,7 @@ class LastPageActivity : AppCompatActivity() {
         const val KEY_FINAL_SENTANCE = "And when they did random things together it turned to crazy randomness!"
         const val PASSING_STRING = " "
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +64,8 @@ class LastPageActivity : AppCompatActivity() {
             saveIntent.putExtra(story_text.toString(), PASSING_STRING)
             setResult(Activity.RESULT_OK, intent)
             startActivity(saveIntent)
+
+
 
             finish()
 
