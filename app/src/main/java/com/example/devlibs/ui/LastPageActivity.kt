@@ -17,6 +17,9 @@ import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
 import com.example.devlibs.view.AlsCustomView
+import com.example.devlibs.view.UserInputFields.Companion.instance1
+import com.example.devlibs.view.UserInputFields.Companion.instance2
+import com.example.devlibs.view.UserInputFields.Companion.instance3
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.edittexts_item.*
 
@@ -65,8 +68,8 @@ class LastPageActivity : AppCompatActivity() {
                     var fourthSentance = KEY_FOURTH_SENTANCE
                     var fifthSentance = KEY_FIFTH_SENTANCE
 
-        story_text.text = "$introText $devLibWords[0] . \n $secondSentance $devLibWords[1] , $thirdSentance .  " +
-                "\n $fourthSentance $devLibWords[2] . $fifthSentance"
+        story_text.text = "$introText $instance1. \n $secondSentance $instance2, $thirdSentance .  " +
+                "\n $fourthSentance $instance3. $fifthSentance"
 
         for (i in 0 until devLibWords.size){
             devLibWords.removeAt(devLibWords.size-1)

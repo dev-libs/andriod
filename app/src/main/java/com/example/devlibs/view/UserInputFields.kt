@@ -8,54 +8,57 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.devlibs.R
-import com.example.devlibs.models.ListObject
-import com.example.devlibs.models.ListObject.Companion.devLibWords
-import kotlinx.android.synthetic.main.activity_last_page.view.*
+
 
 class UserInputFields(context: Context, attributeSet: AttributeSet) :
     LinearLayout(context, attributeSet) {
 
+    companion object{
+        var noun1 = ""
+        var noun2 = ""
+        var noun3 = ""
+    }
+
     init {
-        val typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.UserInputFields)
-        val editTextsNumber = typedArray.getInt(R.styleable.UserInputFields_edittexts_number, 3)
-        val categoryType = typedArray.getString(R.styleable.UserInputFields_category_type)
-        val placeholderWord = typedArray.getString(R.styleable.UserInputFields_placeholder_word)
+        var typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.UserInputFields)
+        var editTextsNumber = typedArray.getInt(R.styleable.UserInputFields_edittexts_number, 3)
+        var categoryType = typedArray.getString(R.styleable.UserInputFields_category_type)
+        var placeholderWord = typedArray.getString(R.styleable.UserInputFields_placeholder_word)
 
 
         val textView = TextView(context)
         this.orientation = VERTICAL
-        textView.text = categoryType?: "Category Not Set"
+        textView.text = categoryType ?: "Category Not Set"
         addView(textView)
 
+        fun clearArray(mutableList: MutableList<String>){
+            for (i in 0 until mutableList.size){
+                mutableList.removeAt(mutableList.size-1)
+            }
+        }
 
-
-        for (i in 1..editTextsNumber){
-            val editTextField = EditText(context)
-            editTextField.setText(placeholderWord, TextView.BufferType.EDITABLE)
-
-            editTextField.addTextChangedListener(object: TextWatcher {
+        fun createTextChangeListener(id: Int, editTextField: EditText) {
+            editTextField.addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(p0: Editable?) {
-
                 }
+
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 }
+
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                   val index = devLibWords.size
-                    var wordText = editTextField.text.toString()
-                    if (p0?.length != 0){
-                        val word = editTextField.text.toString()
-                        devLibWords.add(word)
 
                     }
-
-
-//                    if (devLibWords[index] != null){
-//                        devLibWords[index] = editTextField.text.toString()
-//                    }else{
-//                        devLibWords.add(word)
-//                    }
                 }
             })
+
+        }
+
+        for (i in 1..editTextsNumber) {
+            val editTextField = EditText(context)
+            editTextField.id = i
+            editTextField.setText(placeholderWord, TextView.BufferType.EDITABLE)
+            createTextChangeListener(editTextField.id, editTextField)
+
             addView(editTextField)
         }
     }
