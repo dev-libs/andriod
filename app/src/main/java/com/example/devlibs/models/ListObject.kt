@@ -1,7 +1,6 @@
 package com.example.devlibs.models
 
-class ListObject(typeOfWords: String, val word1: String?, val word2: String?, val word3: String?) {
-    val typeOfWords = typeOfWords
+class ListObject(val typeOfWords: String, val word1: String?, val word2: String?, val word3: String?) {
 
     companion object{
         var devLibsInsertWords = mutableListOf(
