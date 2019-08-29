@@ -14,6 +14,7 @@ import com.example.devlibs.models.ListObject.Companion.devLibsInsertWords
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
+import com.example.devlibs.view.AlsCustomView
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.edittexts_item.*
 
@@ -103,8 +104,16 @@ class LastPageActivity : AppCompatActivity() {
 
 
                 finish()
+                startActivity(saveIntent)
 
-
+        }
+        button_share.setOnClickListener {
+            val shareIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, story_text.text.toString())
+            }
+            startActivity(Intent.createChooser(shareIntent, KEY_STORY_INTRO ))
         }
     }
 }

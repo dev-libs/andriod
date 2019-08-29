@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
+    android:id="@+id/my_layout"
     android:padding="24dp"
     android:background="@color/black"
     android:layout_height="match_parent"
@@ -26,18 +26,19 @@
 
     <TextView
         android:id="@+id/saved_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_height="201dp"
         android:text="@string/sampletextsampletextsampletext"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="20dp"
         android:textStyle="italic"
-        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text2"
-        app:layout_constraintVertical_bias="0.505"
-        tools:layout_editor_absoluteX="-6dp" />
-
+        app:layout_constraintVertical_bias="0.188" />
 
     <Button
         android:id="@+id/button_back"
