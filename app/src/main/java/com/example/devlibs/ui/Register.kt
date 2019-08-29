@@ -5,16 +5,5 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.devlibs.R
 
-
-class Register : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.register)
-
-            //    button_confirm_register.setOnClickListener {
-   //         val confirm = Intent(this, MainActivity::class.java)
-     //       startActivity(confirm)
-  //      }
     }
 }
