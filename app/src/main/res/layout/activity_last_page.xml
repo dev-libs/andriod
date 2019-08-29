@@ -39,8 +39,8 @@
 
     <ImageView
         android:id="@+id/button_tryagain"
-        android:layout_width="186dp"
-        android:layout_height="137dp"
+        android:layout_width="127dp"
+        android:layout_height="119dp"
         android:adjustViewBounds="true"
         android:src="@drawable/dev_libs_icon"
         android:text="@string/try_again"
@@ -57,10 +57,10 @@
         android:text="SAVE YOUR WORDS"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.386"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_tryagain"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.238" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
