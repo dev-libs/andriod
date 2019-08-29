@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.SavedStoriesActivity">
     <TextView
-        android:text="@string/this_is_your_story"
+        android:text="Previously Used Words"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_width="match_parent"

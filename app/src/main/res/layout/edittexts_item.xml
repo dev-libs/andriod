@@ -4,55 +4,17 @@
     android:layout_margin="8dp"
     android:elevation="1dp"
     android:layout_width="match_parent"
-    app:cardCornerRadius="32dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/footer"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <com.example.devlibs.view.UserInputFields
+        android:id="@+id/word_set"
+        android:layout_margin="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/footer">
-
-        <TextView
-            android:id="@+id/word_type"
-            android:textColor="@color/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Adjectives:"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
-        <EditText
-            android:id="@+id/edittext1"
-            android:background="@color/text1"
-            android:layout_width="200dp"
-            android:textColorHint="@color/grey"
-            android:hint="1"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
-        <EditText
-            android:id="@+id/edittext2"
-            android:layout_width="200dp"
-            android:background="@color/text1"
-            android:textColorHint="@color/grey"
-            android:hint="2"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
-        <EditText
-            android:id="@+id/edittext3"
-            android:layout_width="200dp"
-            android:background="@color/text1"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textColorHint="@color/grey"
-            android:hint="3"
-            android:textAppearance="?attr/textAppearanceListItem" />
-
-    </LinearLayout>
+        />
 
 </androidx.cardview.widget.CardView>
 

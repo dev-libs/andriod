@@ -11,6 +11,7 @@ import com.example.devlibs.models.ListObject
 import com.example.devlibs.ui.LastPageActivity.Companion.PASSING_STRING
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.activity_saved_stories.*
+import kotlinx.android.synthetic.main.edittexts_item.*
 
 class SavedStoriesActivity : AppCompatActivity() {
     companion object {
@@ -25,41 +26,8 @@ class SavedStoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saved_stories)
 
-
-
     }
-    private fun intentGenerator(myStory: LastPageActivity){
-        val intent = Intent(this, LastPageActivity::class.java)
-
-        startActivityForResult(intent, RESULT_INT)
-    }
-
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            if (requestCode == RESULT_INT && resultCode == Activity.RESULT_OK) {
-                val myStory: LastPageActivity =
-                    data?.getSerializableExtra(PASSING_STRING) as LastPageActivity
-                val programText: TextView = textViewGenerator(myStory)
-                activity_saved_stories.addView(programText)
-            }
-            super.onActivityResult(requestCode, resultCode, data)
-        }
-
-
-    fun textViewGenerator(myStory: LastPageActivity): TextView{
-        val programTextView: TextView = TextView(this)
-        programTextView.textSize = 20f
-        programTextView.text = story_text.text
-
-
-        programTextView.setOnClickListener{
-            intentGenerator(myStory = LastPageActivity())
-            activity_saved_stories.removeView(it)
-
-        }
-        return programTextView
-    }
-
-    }
+}
 
 
 
