@@ -13,6 +13,7 @@
         <activity android:name=".ui.SavedStoriesActivity" />
         <activity android:name=".ui.GetUserTexts" />
         <activity android:name=".ui.LastPageActivity" />
+        <activity android:name=".view.AlsCustomView"/>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
