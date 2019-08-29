@@ -5,11 +5,13 @@ import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 import com.example.devlibs.R
 import com.example.devlibs.models.ListObject
+import com.example.devlibs.models.ListObject.Companion.devLibWords
 import com.example.devlibs.models.ListObject.Companion.devLibsInsertWords
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
@@ -57,35 +59,48 @@ class LastPageActivity : AppCompatActivity() {
 
         //TODO 2 that how we place the edittext here
 
-        val noun1 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_ONE)
-        if (noun1 != " ") {
-            var noun1Text = noun1.toString()
-    //        story_text.setText(firstNounText)
-
-            val noun2 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_TWO)
-            if (noun2 != " ") {
-                var noun2Text = noun2.toString()
-
-                val noun3 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_THREE)
-                if (noun3 != " ") {
-                    var noun3Text = noun3.toString()
-
-
-                            //these are just hard coded strings referred in companions above
-                    var introText = KEY_STORY_INTRO
+        var introText = KEY_STORY_INTRO
                     var secondSentance = KEY_SECOND_SENTANCE
                     var thirdSentance = KEY_THIRD_SENTANCE
                     var fourthSentance = KEY_FOURTH_SENTANCE
                     var fifthSentance = KEY_FIFTH_SENTANCE
 
+        story_text.text = "$introText $devLibWords[0] . \n $secondSentance $devLibWords[1] , $thirdSentance .  " +
+                "\n $fourthSentance $devLibWords[2] . $fifthSentance"
 
-                    // generating the story below
-
-                    story_text.setText("$introText $noun1Text . \n $secondSentance $noun2Text , $thirdSentance .  " +
-                            "\n $fourthSentance $noun3Text . $fifthSentance" )
-                }
-            }
+        for (i in 0 until devLibWords.size){
+            devLibWords.removeAt(devLibWords.size-1)
         }
+
+//        val noun1 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_ONE)
+//        if (noun1 != " ") {
+//            var noun1Text = noun1.toString()
+//    //        story_text.setText(firstNounText)
+//
+//            val noun2 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_TWO)
+//            if (noun2 != " ") {
+//                var noun2Text = noun2.toString()
+//
+//                val noun3 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_THREE)
+//                if (noun3 != " ") {
+//                    var noun3Text = noun3.toString()
+//
+//
+//                            //these are just hard coded strings referred in companions above
+//                    var introText = KEY_STORY_INTRO
+//                    var secondSentance = KEY_SECOND_SENTANCE
+//                    var thirdSentance = KEY_THIRD_SENTANCE
+//                    var fourthSentance = KEY_FOURTH_SENTANCE
+//                    var fifthSentance = KEY_FIFTH_SENTANCE
+//
+//
+//                    // generating the story below
+//
+//                    story_text.setText("$introText $noun1Text . \n $secondSentance $noun2Text , $thirdSentance .  " +
+//                            "\n $fourthSentance $noun3Text . $fifthSentance" )
+//                }
+//            }
+//        }
         //note that this is just a button intent
 
         button_tryagain.setOnClickListener {
@@ -95,9 +110,9 @@ class LastPageActivity : AppCompatActivity() {
 
         button_save.setOnClickListener {
             val saveIntent = Intent(this, SavedActivity::class.java)
-            if(edittext1 != null) {
-                saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
-            }
+//            if(edittext1 != null) {
+//                saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
+//            }
                 startActivity(saveIntent)
 
 
