@@ -26,44 +26,8 @@ class SavedStoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saved_stories)
 
-
-
-
     }
-    private fun intentGenerator(word: ListObject){
-        val intent = Intent(this, LastPageActivity::class.java)
-        intent.putExtra(GetUserTexts.KEY_NOUN_ONE, edittext1.toString())
-
-        startActivityForResult(intent, RESULT_INT)
-    }
-
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            if (requestCode == RESULT_INT && resultCode == Activity.RESULT_OK) {
-                val word1: TextView =
-                    data?.getSerializableExtra(GetUserTexts.KEY_NOUN_ONE) as TextView
-                val programText: TextView = textViewGenerator(LastPageActivity.toString())
-                activity_saved_stories.addView(programText)
-            }
-            super.onActivityResult(requestCode, resultCode, data)
-        }
-
-
-    fun textViewGenerator(word: String): TextView{
-        val programTextView: TextView = TextView(this)
-        programTextView.textSize = 20f
-        programTextView.text = story_text.text
-
-
-        programTextView.setOnClickListener{
-
-            activity_saved_stories.removeView(it)
-
-        }
-
-        return programTextView
-    }
-
-    }
+}
 
 
 
