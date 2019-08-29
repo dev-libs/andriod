@@ -33,9 +33,9 @@ class GetUserTexts : AppCompatActivity() {
 
             //TODO 1 ! grabbing our editText and passing them into our story (using `key`(companion value)):
 
-            intent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
-            intent.putExtra(KEY_NOUN_TWO, edittext2.text.toString())
-            intent.putExtra(KEY_NOUN_THREE, edittext3.text.toString())
+//            intent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
+//            intent.putExtra(KEY_NOUN_TWO, edittext2.text.toString())
+//            intent.putExtra(KEY_NOUN_THREE, edittext3.text.toString())
             startActivity(intent)
         }
     }

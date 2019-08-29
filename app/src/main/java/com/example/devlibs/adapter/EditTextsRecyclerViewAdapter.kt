@@ -23,11 +23,12 @@ class EditTextsRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = wordsToUse[position]
-        holder.wordType.text = item.typeOfWords
-        holder.word1.setText(item.word1, TextView.BufferType.EDITABLE)
-        holder.word2.setText(item.word2, TextView.BufferType.EDITABLE)
-        holder.word3.setText(item.word3, TextView.BufferType.EDITABLE)
+
+//        val item = wordsToUse[position]
+//        holder.wordType.text = item.typeOfWords
+//        holder.word1.setText(item.word1, TextView.BufferType.EDITABLE)
+//        holder.word2.setText(item.word2, TextView.BufferType.EDITABLE)
+//        holder.word3.setText(item.word3, TextView.BufferType.EDITABLE)
 
         //On text change listener
 //        change theme programmatically
@@ -40,9 +41,9 @@ class EditTextsRecyclerViewAdapter(
     override fun getItemCount(): Int = wordsToUse.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val wordType: TextView = view.word_type
-        val word1: EditText = view.edittext1
-        val word2: EditText = view.edittext2
-        val word3: EditText = view.edittext3
+//        val wordType: TextView = view.word_type
+//        val word1: EditText = view.edittext1
+//        val word2: EditText = view.edittext2
+//        val word3: EditText = view.edittext3
     }
 }
