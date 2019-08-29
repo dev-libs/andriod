@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.devlibs.R
 
+
 class UserInputFields(context: Context, attributeSet: AttributeSet) :
     LinearLayout(context, attributeSet) {
 
@@ -45,17 +46,7 @@ class UserInputFields(context: Context, attributeSet: AttributeSet) :
                 }
 
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    val word = editTextField.text.toString()
-                    when (id) {
-                        1 -> {
-                            noun1 = word
-                        }
-                        2 -> {
-                            noun2 = word
-                        }
-                        3 -> {
-                            noun3 = word
-                        }
+
                     }
                 }
             })
