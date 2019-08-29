@@ -19,23 +19,23 @@ class AlsCustomView : LinearLayout{
 
     //generating random strings
 
-    var historyList = mutableListOf(edittext1?.toString(), edittext2?.toString(), edittext3?.toString())
-
-    //set pointer and go through the list
-    var pointer = 0
-    fun incPointer(){
-        pointer++
-        if(pointer >= historyList.size){
-            pointer = 0
-
-        }
-    }
-    fun decPointer(){
-        pointer--
-        if (pointer < 0){
-            pointer = historyList.size -1
-        }
-    }
+//    var historyList = mutableListOf(edittext1?.toString(), edittext2?.toString(), edittext3?.toString())
+//
+//    //set pointer and go through the list
+//    var pointer = 0
+//    fun incPointer(){
+//        pointer++
+//        if(pointer >= historyList.size){
+//            pointer = 0
+//
+//        }
+//    }
+//    fun decPointer(){
+//        pointer--
+//        if (pointer < 0){
+//            pointer = historyList.size -1
+//        }
+//    }
     init {
 
         val generatedTextview = LayoutInflater.from(context)
@@ -44,7 +44,7 @@ class AlsCustomView : LinearLayout{
         orientation = HORIZONTAL
 
             addView(generatedTextview)
-            generatedTextview.text = historyList[pointer]
+//            generatedTextview.text = historyList[pointer]
         }
 
 

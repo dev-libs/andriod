@@ -95,9 +95,9 @@ class LastPageActivity : AppCompatActivity() {
 
         button_save.setOnClickListener {
             val saveIntent = Intent(this, SavedActivity::class.java)
-            if(edittext1 != null) {
-                saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
-            }
+//            if(edittext1 != null) {
+//                saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
+//            }
                 startActivity(saveIntent)
 
 
