@@ -31,13 +31,10 @@ class UserInputFields(context: Context, attributeSet: AttributeSet) :
         textView.text = categoryType ?: "Category Not Set"
         addView(textView)
 
-        fun clearArray(mutableList: MutableList<String>){
-            for (i in 0 until mutableList.size){
-                mutableList.removeAt(mutableList.size-1)
-            }
-        }
-
-        fun createTextChangeListener(id: Int, editTextField: EditText) {
+        for (i in 1..editTextsNumber) {
+            val editTextField = EditText(context)
+            editTextField.id = i
+            editTextField.setText(placeholderWord, TextView.BufferType.EDITABLE)
             editTextField.addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(p0: Editable?) {
                 }
@@ -46,18 +43,21 @@ class UserInputFields(context: Context, attributeSet: AttributeSet) :
                 }
 
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
+                    val word = editTextField.text.toString()
+                    when (editTextField.id) {
+                        1 -> {
+                            noun1 = word
+                        }
+                        2 -> {
+                            noun2 = word
+                        }
+                        3 -> {
+                            noun3 = word
+                        }
                     }
                 }
             })
 
-        }
-
-        for (i in 1..editTextsNumber) {
-            val editTextField = EditText(context)
-            editTextField.id = i
-            editTextField.setText(placeholderWord, TextView.BufferType.EDITABLE)
-            createTextChangeListener(editTextField.id, editTextField)
 
             addView(editTextField)
         }
