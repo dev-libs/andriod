@@ -2,9 +2,11 @@ package com.example.devlibs.ui
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 import com.example.devlibs.R
 import com.example.devlibs.models.ListObject
@@ -48,6 +50,10 @@ class LastPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_last_page)
 
+        val myAnimation = ContextCompat.getDrawable(this, R.drawable.play_again_animation)
+        button_tryagain.setImageDrawable(myAnimation)
+        (myAnimation as AnimationDrawable).start()
+
         //TODO 2 that how we place the edittext here
 
         val noun1 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_ONE)
@@ -87,17 +93,17 @@ class LastPageActivity : AppCompatActivity() {
         }
 
         button_save.setOnClickListener {
-            val saveIntent = Intent(this, SavedStoriesActivity::class.java)
+            val saveIntent = Intent(this, SavedActivity::class.java)
             if(edittext1 != null) {
                 saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
             }
-                setResult(Activity.RESULT_OK, intent)
+                startActivity(saveIntent)
 
 
 
 
                 finish()
-                startActivity(saveIntent)
+
 
         }
     }
