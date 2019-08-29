@@ -10,6 +10,9 @@
 
     <com.example.devlibs.view.UserInputFields
         android:id="@+id/word_set"
+        app:edittexts_number="5"
+        app:category_type="Nouns"
+        app:placeholder_word="Park"
         android:layout_margin="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

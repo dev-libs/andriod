@@ -33,17 +33,23 @@ class UserInputFields(context: Context, attributeSet: AttributeSet) :
 
             editTextField.addTextChangedListener(object: TextWatcher {
                 override fun afterTextChanged(p0: Editable?) {
+
                 }
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 }
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    val index = devLibWords.size
-                    val word = editTextField.text.toString()
-                    if (devLibWords[index] != null){
-                        devLibWords[index] = editTextField.text.toString()
-                    }else{
-                        devLibWords.add(index, word)
+//                    val index = devLibWords.size
+                    if (p0?.length != 0){
+                        val word = editTextField.text.toString()
+                        devLibWords.add(word)
                     }
+
+
+//                    if (devLibWords[index] != null){
+//                        devLibWords[index] = editTextField.text.toString()
+//                    }else{
+//                        devLibWords.add(word)
+//                    }
                 }
             })
             addView(editTextField)
