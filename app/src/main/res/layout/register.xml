@@ -38,6 +38,7 @@
         android:id="@+id/edit_username"
         android:hint="New Username"
         android:background="@color/text1"
+
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     <TextView
         android:id="@+id/text_email"
@@ -89,9 +90,7 @@
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_email"/>
+
 
     <Button
         android:id="@+id/button_confirm_register"
