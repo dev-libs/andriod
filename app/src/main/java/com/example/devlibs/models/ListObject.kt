@@ -9,6 +9,5 @@ class ListObject(typeOfWords: String, val word1: String?, val word2: String?, va
             ListObject("Adjective", "Dark", "Light", "Heavy"),
             ListObject("Verb", "Cloning", "Typing", "Saving")
         )
-        var devLibWords = mutableListOf<String>()
     }
 }
