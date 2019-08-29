@@ -8,7 +8,9 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.devlibs.R
+import com.example.devlibs.models.ListObject
 import com.example.devlibs.models.ListObject.Companion.devLibWords
+import kotlinx.android.synthetic.main.activity_last_page.view.*
 
 class UserInputFields(context: Context, attributeSet: AttributeSet) :
     LinearLayout(context, attributeSet) {
@@ -38,10 +40,12 @@ class UserInputFields(context: Context, attributeSet: AttributeSet) :
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 }
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-//                    val index = devLibWords.size
+                   val index = devLibWords.size
+                    var wordText = editTextField.text.toString()
                     if (p0?.length != 0){
                         val word = editTextField.text.toString()
                         devLibWords.add(word)
+
                     }
 
 
