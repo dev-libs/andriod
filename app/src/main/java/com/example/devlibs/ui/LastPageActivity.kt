@@ -38,7 +38,7 @@ class LastPageActivity : AppCompatActivity() {
         const val KEY_14_SENTANCE = "JavaScript syntax can be a/an "
         const val KEY_15_SENTANCE = " . Once you learn you will be "
         const val KEY_16_SENTANCE = ""
-
+                var STORY = ""
 
 
         const val PASSING_STRING = " "
@@ -101,8 +101,8 @@ class LastPageActivity : AppCompatActivity() {
         button_save.setOnClickListener {
             val saveIntent = Intent(this, SavedActivity::class.java)
 
-                saveIntent.putExtra( story_text.text.toString(), KEY_16_SENTANCE)
-
+           //     saveIntent.putExtra( story_text.text.toString(), KEY_16_SENTANCE)
+                STORY = story_text.text.toString()
 //            }
                 startActivity(saveIntent)
 
