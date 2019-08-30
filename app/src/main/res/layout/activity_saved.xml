@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:id="@+id/my_layout"
     android:padding="24dp"
-    android:background="@color/black"
+
+    android:background="@drawable/coding"
     android:layout_height="match_parent"
     tools:context=".ui.SavedActivity">
 
@@ -15,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="YOUR STORIES"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/font"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
