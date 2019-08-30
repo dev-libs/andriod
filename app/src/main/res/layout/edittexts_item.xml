@@ -10,6 +10,7 @@
 
     <com.example.devlibs.view.UserInputFields
         android:id="@+id/word_set"
+        app:category_type="Noun"
         android:layout_margin="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

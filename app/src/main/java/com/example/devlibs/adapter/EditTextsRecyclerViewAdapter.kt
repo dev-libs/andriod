@@ -1,18 +1,34 @@
 package com.example.devlibs.adapter
 
+import android.content.Context
+import android.content.res.Resources
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.devlibs.R
 import com.example.devlibs.models.ListObject
+import com.example.devlibs.ui.MainActivity
+import com.example.devlibs.view.UserInputFields
+import com.example.devlibs.view.UserInputFields.Companion.category
+import kotlinx.android.synthetic.main.edittexts_item.view.*
 
 
 class EditTextsRecyclerViewAdapter(
-    private val wordsToUse: List<ListObject>
+    private val wordsToUse: List<ListObject>, var context: Context
 ) : RecyclerView.Adapter<EditTextsRecyclerViewAdapter.ViewHolder>() {
+    
+    var counter = 0
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+        when(counter++){
+            0 -> category = "Noun"
+            1 -> category = "Verb"
+            2 -> category = "Adjective"
+        }
+
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.edittexts_item, parent, false)
         return ViewHolder(view)
@@ -20,14 +36,11 @@ class EditTextsRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-//        val item = wordsToUse[position]
-//        holder.wordType.text = item.typeOfWords
-
     }
 
     override fun getItemCount(): Int = wordsToUse.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-//        val wordType: TextView = view.word_type
+        val wordSet = view.word_set
     }
 }
