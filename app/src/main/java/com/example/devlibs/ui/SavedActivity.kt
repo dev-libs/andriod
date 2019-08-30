@@ -2,6 +2,7 @@ package com.example.devlibs.ui
 
 import android.content.Intent
 import android.content.Intent.EXTRA_TEXT
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,18 +36,18 @@ class SavedActivity : AppCompatActivity() {
 
 
 //  if (savedWord != null) {
-        programTextView.text = STORY
-        programTextView.setTextColor(titleColor)
+        programTextView.setText(STORY)
+        programTextView.setTextColor(Color.BLUE)
     //        story_text.setText(firstNounText)
 
 
 
 
 
-    my_layout.addView(programTextView)
+    scroll_layout.addView(programTextView)
  // }
 
-        saved_text.setText(STORY)
+     //   saved_text.setText(STORY)
 
     }
 }
