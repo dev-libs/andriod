@@ -35,17 +35,14 @@ if (savedWord != null) {
         programTextView.setTextColor(titleColor)
     //        story_text.setText(firstNounText)
 
+    saved_text.setText(story_text.text.toString())
 
 
 
     my_layout.addView(programTextView)
 }
-        saved_text.setText(savedWord)
 
 
-        button_back.setOnClickListener {
-            val buttonBackIntent = Intent(this, GetUserTexts::class.java)
-            startActivity(buttonBackIntent)
-        }
+
     }
 }
