@@ -17,9 +17,10 @@ import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
 import com.example.devlibs.view.AlsCustomView
-import com.example.devlibs.view.UserInputFields.Companion.instance1
-import com.example.devlibs.view.UserInputFields.Companion.instance2
-import com.example.devlibs.view.UserInputFields.Companion.instance3
+
+import com.example.devlibs.view.UserInputFields.Companion.noun1
+import com.example.devlibs.view.UserInputFields.Companion.noun2
+import com.example.devlibs.view.UserInputFields.Companion.noun3
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.edittexts_item.*
 
@@ -67,9 +68,10 @@ class LastPageActivity : AppCompatActivity() {
                     var thirdSentance = KEY_THIRD_SENTANCE
                     var fourthSentance = KEY_FOURTH_SENTANCE
                     var fifthSentance = KEY_FIFTH_SENTANCE
+                    var sixSen = KEY_6_SENTANCE
 
-        story_text.text = "$introText $instance1. \n $secondSentance $instance2, $thirdSentance .  " +
-                "\n $fourthSentance $instance3. $fifthSentance"
+        story_text.text = "$introText $noun1. \n $secondSentance $noun2, $thirdSentance .  " +
+                "\n $fourthSentance $noun3. $fifthSentance , $sixSen"
 
         for (i in 0 until devLibWords.size){
             devLibWords.removeAt(devLibWords.size-1)
