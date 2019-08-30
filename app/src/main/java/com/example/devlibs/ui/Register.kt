@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.register.*
 
 class Register : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val name = "userName"
         const val pass = "password"
     }
@@ -23,5 +23,6 @@ class Register : AppCompatActivity() {
             val confirm = Intent(this, MainActivity::class.java)
 
             startActivity(confirm)
+        }
     }
 }
