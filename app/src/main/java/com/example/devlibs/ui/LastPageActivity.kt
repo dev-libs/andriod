@@ -6,19 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.devlibs.R
-
-import com.example.devlibs.models.ListObject
-import com.example.devlibs.models.ListObject.Companion.devLibWords
-import com.example.devlibs.models.ListObject.Companion.devLibsInsertWords
-import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
-import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
-import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
-import com.example.devlibs.view.AlsCustomView
 import com.example.devlibs.view.UserInputFields.Companion.adjective1
 import com.example.devlibs.view.UserInputFields.Companion.adjective2
 import com.example.devlibs.view.UserInputFields.Companion.adjective3
-
-
 import com.example.devlibs.view.UserInputFields.Companion.noun1
 import com.example.devlibs.view.UserInputFields.Companion.noun2
 import com.example.devlibs.view.UserInputFields.Companion.noun3
