@@ -37,7 +37,8 @@ class SavedActivity : AppCompatActivity() {
 
 //  if (savedWord != null) {
         programTextView.setText(STORY)
-        programTextView.setTextColor(Color.BLUE)
+        programTextView.setBackgroundColor(Color.GRAY)
+        programTextView.setTextColor(Color.WHITE)
     //        story_text.setText(firstNounText)
 
 
