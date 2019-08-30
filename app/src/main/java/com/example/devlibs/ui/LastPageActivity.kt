@@ -82,7 +82,7 @@ class LastPageActivity : AppCompatActivity() {
                     var fourTeen = KEY_14_SENTANCE
                     var fifteen = KEY_15_SENTANCE
                     var sixteen = KEY_16_SENTANCE
-                    var seventeen = KEY_17_SENTANCE
+
 
 
         story_text.text = "$introText $noun1. \n $secondSentance $verb1, $thirdSentance $noun2  \n $fourthSentance $adjective1. $fifthSentance $noun3 $sixSen + $noun1" +
@@ -101,8 +101,9 @@ class LastPageActivity : AppCompatActivity() {
 
         button_save.setOnClickListener {
             val saveIntent = Intent(this, SavedActivity::class.java)
-//            if(edittext1 != null) {
-//                saveIntent.putExtra(KEY_NOUN_ONE, edittext1.text.toString())
+
+                saveIntent.putExtra( story_text.text.toString(), KEY_17_SENTANCE)
+
 //            }
                 startActivity(saveIntent)
 
