@@ -14,11 +14,17 @@ import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
 import com.example.devlibs.view.AlsCustomView
+import com.example.devlibs.view.UserInputFields.Companion.adjective1
+import com.example.devlibs.view.UserInputFields.Companion.adjective2
+import com.example.devlibs.view.UserInputFields.Companion.adjective3
 
 
 import com.example.devlibs.view.UserInputFields.Companion.noun1
 import com.example.devlibs.view.UserInputFields.Companion.noun2
 import com.example.devlibs.view.UserInputFields.Companion.noun3
+import com.example.devlibs.view.UserInputFields.Companion.verb1
+import com.example.devlibs.view.UserInputFields.Companion.verb2
+import com.example.devlibs.view.UserInputFields.Companion.verb3
 import kotlinx.android.synthetic.main.activity_last_page.*
 
 class LastPageActivity : AppCompatActivity() {
@@ -79,13 +85,11 @@ class LastPageActivity : AppCompatActivity() {
                     var seventeen = KEY_17_SENTANCE
 
 
-        story_text.text = "$introText $noun1. \n $secondSentance $noun2, $thirdSentance .  " +
+        story_text.text = "$introText $noun1. \n $secondSentance $verb1, $thirdSentance $noun2  \n $fourthSentance $adjective1. $fifthSentance $noun3 $sixSen + $noun1" +
 
-                "\n $fourthSentance $noun3. $fifthSentance , $sixSen + " +
-
-              "  \n $fourthSentance $noun3. $fifthSentance . $sixSen, $sevenSen, $eightSen, $nineSen , $tenSen . " +
-                        " \n $elevenSen, $twelveSen, $thirteen . " +
-                        "\n  $fourTeen, \n $fifteen, $sixteen. $seventeen"
+              "  \n $sevenSen $noun3. $eightSen  $nineSen $verb3, , $tenSen $noun1. " +
+                        " \n $elevenSen $adjective2. $twelveSen $noun2 , $verb2 $thirteen $noun3. " +
+                        "\n  $fourTeen $adjective3 \n $fifteen, $adjective1"
 
 
         //note that this is just a button intent
