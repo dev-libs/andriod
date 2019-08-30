@@ -26,9 +26,13 @@
     </facet>
     <facet type="kotlin-language" name="Kotlin">
 
+      <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false" pureKotlinSourceFolders="C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\debug\kotlin;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\debug\java;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\release\kotlin;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\release\java;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\debugAndroidTest\kotlin;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\debugUnitTest\kotlin;C:\Users\mraya\Desktop\GitProjects\devlpbs\android\app\src\releaseUnitTest\kotlin">
+
+
       <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
 
       <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false" pureKotlinSourceFolders="C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\debug\kotlin;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\debug\java;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\release\kotlin;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\release\java;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\debugAndroidTest\kotlin;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\debugUnitTest\kotlin;C:\Users\mraya\AndroidStudioProjects\BWeek\android\app\src\releaseUnitTest\kotlin">
+
 
         <compilerSettings>
           <option name="additionalArguments" value="-Xallow-no-source-files" />

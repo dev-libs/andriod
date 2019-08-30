@@ -5,7 +5,16 @@ import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import com.example.devlibs.R
+
+import com.example.devlibs.models.ListObject
+import com.example.devlibs.models.ListObject.Companion.devLibWords
+import com.example.devlibs.models.ListObject.Companion.devLibsInsertWords
+import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
+import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
+import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
+import com.example.devlibs.view.AlsCustomView
+
+
 import com.example.devlibs.view.UserInputFields.Companion.noun1
 import com.example.devlibs.view.UserInputFields.Companion.noun2
 import com.example.devlibs.view.UserInputFields.Companion.noun3
@@ -55,9 +64,14 @@ class LastPageActivity : AppCompatActivity() {
                     var thirdSentance = KEY_THIRD_SENTANCE
                     var fourthSentance = KEY_FOURTH_SENTANCE
                     var fifthSentance = KEY_FIFTH_SENTANCE
+                    var sixSen = KEY_6_SENTANCE
 
         story_text.text = "$introText $noun1. \n $secondSentance $noun2, $thirdSentance .  " +
+
+                "\n $fourthSentance $noun3. $fifthSentance , $sixSen"
+
                 "\n $fourthSentance $noun3. $fifthSentance"
+
 
         //note that this is just a button intent
 
