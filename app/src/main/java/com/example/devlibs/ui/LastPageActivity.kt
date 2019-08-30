@@ -1,15 +1,11 @@
 package com.example.devlibs.ui
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColorInt
-import com.example.devlibs.R
+
 import com.example.devlibs.models.ListObject
 import com.example.devlibs.models.ListObject.Companion.devLibWords
 import com.example.devlibs.models.ListObject.Companion.devLibsInsertWords
@@ -18,11 +14,11 @@ import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_THREE
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_TWO
 import com.example.devlibs.view.AlsCustomView
 
+
 import com.example.devlibs.view.UserInputFields.Companion.noun1
 import com.example.devlibs.view.UserInputFields.Companion.noun2
 import com.example.devlibs.view.UserInputFields.Companion.noun3
 import kotlinx.android.synthetic.main.activity_last_page.*
-import kotlinx.android.synthetic.main.edittexts_item.*
 
 class LastPageActivity : AppCompatActivity() {
 
@@ -71,41 +67,12 @@ class LastPageActivity : AppCompatActivity() {
                     var sixSen = KEY_6_SENTANCE
 
         story_text.text = "$introText $noun1. \n $secondSentance $noun2, $thirdSentance .  " +
+
                 "\n $fourthSentance $noun3. $fifthSentance , $sixSen"
 
-        for (i in 0 until devLibWords.size){
-            devLibWords.removeAt(devLibWords.size-1)
-        }
+                "\n $fourthSentance $noun3. $fifthSentance"
 
-//        val noun1 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_ONE)
-//        if (noun1 != " ") {
-//            var noun1Text = noun1.toString()
-//    //        story_text.setText(firstNounText)
-//
-//            val noun2 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_TWO)
-//            if (noun2 != " ") {
-//                var noun2Text = noun2.toString()
-//
-//                val noun3 = intent.getSerializableExtra(GetUserTexts.KEY_NOUN_THREE)
-//                if (noun3 != " ") {
-//                    var noun3Text = noun3.toString()
-//
-//
-//                            //these are just hard coded strings referred in companions above
-//                    var introText = KEY_STORY_INTRO
-//                    var secondSentance = KEY_SECOND_SENTANCE
-//                    var thirdSentance = KEY_THIRD_SENTANCE
-//                    var fourthSentance = KEY_FOURTH_SENTANCE
-//                    var fifthSentance = KEY_FIFTH_SENTANCE
-//
-//
-//                    // generating the story below
-//
-//                    story_text.setText("$introText $noun1Text . \n $secondSentance $noun2Text , $thirdSentance .  " +
-//                            "\n $fourthSentance $noun3Text . $fifthSentance" )
-//                }
-//            }
-//        }
+
         //note that this is just a button intent
 
         button_tryagain.setOnClickListener {

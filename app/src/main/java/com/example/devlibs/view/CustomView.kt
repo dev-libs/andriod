@@ -22,7 +22,7 @@ class CustomView (context: Context, attrs: AttributeSet?): LinearLayout(context,
         val backGroundColor = typedArray.getColor(R.styleable.CustomView_background_color, Color.BLACK)
         val textView = LayoutInflater.from(context).inflate(R.layout.custom_view, this, false) as TextView
         textView.text = "Welcome to Dev Libs!" +
-                " Fill in the blanks to create a funny story about you!\""
+                " Fill in the blanks to create a funny story about you!"
         textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
         textView.textSize = textSize
         textView.layoutParams = textLayoutParams
