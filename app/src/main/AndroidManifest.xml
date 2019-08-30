@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.SavedActivity"></activity>
-        <activity android:name=".ui.SavedStoriesActivity" />
         <activity android:name=".ui.GetUserTexts" />
         <activity android:name=".ui.LastPageActivity" />
         <activity android:name=".ui.Register"/>
