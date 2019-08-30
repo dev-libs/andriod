@@ -4,11 +4,15 @@ import android.content.Intent
 import android.content.Intent.EXTRA_TEXT
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import com.example.devlibs.R
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
 import com.example.devlibs.ui.LastPageActivity.Companion.KEY_16_SENTANCE
+import com.example.devlibs.ui.LastPageActivity.Companion.STORY
+import com.example.devlibs.view.UserInputFields.Companion.noun1
 
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.activity_saved.*
@@ -26,23 +30,23 @@ class SavedActivity : AppCompatActivity() {
         programTextView.textSize = 20f
 
 
-        val savedWord = intent.getStringExtra(LastPageActivity.KEY_16_SENTANCE)
+  //      val savedWord = intent.getStringExtra(KEY_16_SENTANCE)
 
 
 
-if (savedWord != null) {
-        programTextView.text = savedWord
+//  if (savedWord != null) {
+        programTextView.text = STORY
         programTextView.setTextColor(titleColor)
     //        story_text.setText(firstNounText)
 
-    saved_text.setText(story_text.text.toString())
+
 
 
 
     my_layout.addView(programTextView)
-}
+ // }
 
-
+        saved_text.setText(STORY)
 
     }
 }
