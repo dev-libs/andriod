@@ -5,6 +5,7 @@ import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
+import com.example.devlibs.R
 
 import com.example.devlibs.models.ListObject
 import com.example.devlibs.models.ListObject.Companion.devLibWords
@@ -65,12 +66,26 @@ class LastPageActivity : AppCompatActivity() {
                     var fourthSentance = KEY_FOURTH_SENTANCE
                     var fifthSentance = KEY_FIFTH_SENTANCE
                     var sixSen = KEY_6_SENTANCE
+                    var sevenSen = KEY_7_SENTANCE
+                    var eightSen = KEY_8_SENTANCE
+                    var nineSen = KEY_9_SENTANCE
+                    var tenSen = KEY_10_SENTANCE
+                    var elevenSen = KEY_11_SENTANCE
+                    var twelveSen = KEY_12_SENTANCE
+                    var thirteen = KEY_13_SENTANCE
+                    var fourTeen = KEY_14_SENTANCE
+                    var fifteen = KEY_15_SENTANCE
+                    var sixteen = KEY_16_SENTANCE
+                    var seventeen = KEY_17_SENTANCE
+
 
         story_text.text = "$introText $noun1. \n $secondSentance $noun2, $thirdSentance .  " +
 
-                "\n $fourthSentance $noun3. $fifthSentance , $sixSen"
+                "\n $fourthSentance $noun3. $fifthSentance , $sixSen + " +
 
-                "\n $fourthSentance $noun3. $fifthSentance"
+              "  \n $fourthSentance $noun3. $fifthSentance . $sixSen, $sevenSen, $eightSen, $nineSen , $tenSen . " +
+                        " \n $elevenSen, $twelveSen, $thirteen . " +
+                        "\n  $fourTeen, \n $fifteen, $sixteen. $seventeen"
 
 
         //note that this is just a button intent
