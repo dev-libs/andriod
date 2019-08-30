@@ -84,7 +84,7 @@ class LastPageActivity : AppCompatActivity() {
 
 
 
-        story_text.text = "$introText $noun1. \n $secondSentance $verb1 $thirdSentance $noun2  \n $fourthSentance $adjective1 $fifthSentance $noun3 $sixSen + $noun1" +
+        story_text.text = "$introText $noun1. \n $secondSentance $verb1 $thirdSentance $noun2  \n $fourthSentance $adjective1 $fifthSentance $noun3. $sixSen + $noun1" +
 
               "  \n $sevenSen $noun3. $eightSen  $nineSen $verb3  $tenSen $noun1. " +
                         " \n $elevenSen $adjective2 $twelveSen $noun2 , $verb2 $thirteen $noun3. " +
