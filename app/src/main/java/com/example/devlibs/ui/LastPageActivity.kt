@@ -48,7 +48,6 @@ class LastPageActivity : AppCompatActivity() {
         const val KEY_14_SENTANCE = "JavaScript syntax can be a/an "
         const val KEY_15_SENTANCE = " . Once you learn you will be "
         const val KEY_16_SENTANCE = ""
-        const val KEY_17_SENTANCE = ""
 
 
 
@@ -81,14 +80,14 @@ class LastPageActivity : AppCompatActivity() {
                     var thirteen = KEY_13_SENTANCE
                     var fourTeen = KEY_14_SENTANCE
                     var fifteen = KEY_15_SENTANCE
-                    var sixteen = KEY_16_SENTANCE
 
 
 
-        story_text.text = "$introText $noun1. \n $secondSentance $verb1, $thirdSentance $noun2  \n $fourthSentance $adjective1. $fifthSentance $noun3 $sixSen + $noun1" +
 
-              "  \n $sevenSen $noun3. $eightSen  $nineSen $verb3, , $tenSen $noun1. " +
-                        " \n $elevenSen $adjective2. $twelveSen $noun2 , $verb2 $thirteen $noun3. " +
+        story_text.text = "$introText $noun1. \n $secondSentance $verb1 $thirdSentance $noun2  \n $fourthSentance $adjective1 $fifthSentance $noun3 $sixSen + $noun1" +
+
+              "  \n $sevenSen $noun3. $eightSen  $nineSen $verb3  $tenSen $noun1. " +
+                        " \n $elevenSen $adjective2 $twelveSen $noun2 , $verb2 $thirteen $noun3. " +
                         "\n  $fourTeen $adjective3 \n $fifteen, $adjective1"
 
         verb1 = ""
@@ -112,16 +111,11 @@ class LastPageActivity : AppCompatActivity() {
         button_save.setOnClickListener {
             val saveIntent = Intent(this, SavedActivity::class.java)
 
-                saveIntent.putExtra( story_text.text.toString(), KEY_17_SENTANCE)
+                saveIntent.putExtra( story_text.text.toString(), KEY_16_SENTANCE)
 
 //            }
                 startActivity(saveIntent)
 
-
-
-
-                finish()
-                startActivity(saveIntent)
 
         }
         button_share.setOnClickListener {

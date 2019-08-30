@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.annotation.ColorInt
 import com.example.devlibs.R
 import com.example.devlibs.ui.GetUserTexts.Companion.KEY_NOUN_ONE
-import com.example.devlibs.ui.LastPageActivity.Companion.KEY_17_SENTANCE
+import com.example.devlibs.ui.LastPageActivity.Companion.KEY_16_SENTANCE
+
 import kotlinx.android.synthetic.main.activity_last_page.*
 import kotlinx.android.synthetic.main.activity_saved.*
 
@@ -25,12 +26,12 @@ class SavedActivity : AppCompatActivity() {
         programTextView.textSize = 20f
 
 
-        val savedWord = intent?.getSerializableExtra(LastPageActivity.KEY_17_SENTANCE)
+        val savedWord = intent.getStringExtra(LastPageActivity.KEY_16_SENTANCE)
 
 
 
 if (savedWord != null) {
-        programTextView.text = savedWord.toString()
+        programTextView.text = savedWord
         programTextView.setTextColor(titleColor)
     //        story_text.setText(firstNounText)
 
@@ -39,7 +40,7 @@ if (savedWord != null) {
 
     my_layout.addView(programTextView)
 }
-        saved_text.setText(KEY_17_SENTANCE)
+        saved_text.setText(savedWord)
 
 
         button_back.setOnClickListener {
