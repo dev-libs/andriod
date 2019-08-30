@@ -9,9 +9,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.devlibs.R
 
-class UserInputFields(context: Context, var attributeSet: AttributeSet) :
+class UserInputFields(context: Context, attributeSet: AttributeSet) :
     LinearLayout(context, attributeSet) {
 
+//    strings used to hold the three verbs, nouns, and adjectives user enters. category is there to
+//    programmatically change title of each list item
     companion object{
         var noun1 = ""
         var noun2 = ""
@@ -26,6 +28,7 @@ class UserInputFields(context: Context, var attributeSet: AttributeSet) :
     }
 
     init {
+//        number of edit text cards can be changed in xml cards. categoryType is currently only changed programmatically
         val typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.UserInputFields)
         val editTextsNumber = typedArray.getInt(R.styleable.UserInputFields_edittexts_number, 3)
         var categoryType = typedArray.getString(R.styleable.UserInputFields_category_type)
@@ -38,8 +41,8 @@ class UserInputFields(context: Context, var attributeSet: AttributeSet) :
         textView.text = categoryType ?: "Category Not Set"
         addView(textView)
 
-        context.theme
-
+//        creates an editText field for the int size of editTextNumber and adds a onTextChanged listener to the editText fields
+//        saves the final entered text as the string to pass to the story.
         for (i in 1..editTextsNumber) {
             val editTextField = EditText(context)
             editTextField.id = i
@@ -103,15 +106,3 @@ class UserInputFields(context: Context, var attributeSet: AttributeSet) :
         }
     }
 }
-
-//when (editTextField.id) {
-//    1 -> {
-//        noun1 = word
-//    }
-//    2 -> {
-//        noun2 = word
-//    }
-//    3 -> {
-//        noun3 = word
-//    }
-//}

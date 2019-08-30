@@ -1,25 +1,21 @@
 package com.example.devlibs.adapter
 
-import android.content.Context
-import android.content.res.Resources
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.devlibs.R
 import com.example.devlibs.models.ListObject
-import com.example.devlibs.ui.MainActivity
-import com.example.devlibs.view.UserInputFields
 import com.example.devlibs.view.UserInputFields.Companion.category
 import kotlinx.android.synthetic.main.edittexts_item.view.*
 
 
 class EditTextsRecyclerViewAdapter(
-    private val wordsToUse: List<ListObject>, var context: Context
+    private val wordsToUse: List<ListObject>
 ) : RecyclerView.Adapter<EditTextsRecyclerViewAdapter.ViewHolder>() {
-    
-    var counter = 0
 
+//    makes each item title unique
+    private var counter = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
