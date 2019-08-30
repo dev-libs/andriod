@@ -91,6 +91,16 @@ class LastPageActivity : AppCompatActivity() {
                         " \n $elevenSen $adjective2. $twelveSen $noun2 , $verb2 $thirteen $noun3. " +
                         "\n  $fourTeen $adjective3 \n $fifteen, $adjective1"
 
+        verb1 = ""
+        verb2 = ""
+        verb3 = ""
+        noun1 = ""
+        noun2 = ""
+        noun3 = ""
+        adjective1 = ""
+        adjective2 = ""
+        adjective3 = ""
+
 
         //note that this is just a button intent
 
